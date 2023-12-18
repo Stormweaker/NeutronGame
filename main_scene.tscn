@@ -8,7 +8,8 @@
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 motion_mode = 1
 script = ExtResource("1_2chsl")
-speed = 179.1
+speed = 200.0
+angle_deg = 30.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 
