@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://mgs06rcori5e"]
+
+[ext_resource type="Script" path="res://Scripts/PlayerMovement.gd" id="1_2chsl"]
+[ext_resource type="Texture2D" uid="uid://bcb778ml6kqfe" path="res://Assets/Images/pixil-frame-0.png" id="2_w3uaj"]
+
+[node name="MainScene" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+motion_mode = 1
+script = ExtResource("1_2chsl")
+speed = 179.1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(50, 50)
+scale = Vector2(3, 3)
+texture = ExtResource("2_w3uaj")
