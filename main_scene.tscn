@@ -1,27 +1,37 @@
-[gd_scene load_steps=4 format=3 uid="uid://mgs06rcori5e"]
+[gd_scene load_steps=6 format=3 uid="uid://mgs06rcori5e"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerMovement.gd" id="1_2chsl"]
 [ext_resource type="Texture2D" uid="uid://bcb778ml6kqfe" path="res://Assets/Images/pixil-frame-0.png" id="2_w3uaj"]
 [ext_resource type="Texture2D" uid="uid://debyb1720ies5" path="res://Assets/Images/Bouboule.png" id="3_m4vn1"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_4ks44"]
+radius = 16.1245
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k618c"]
+radius = 16.8191
+
 [node name="MainScene" type="Node2D"]
 
 [node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(50, 50)
+scale = Vector2(2.5, 2.5)
 motion_mode = 1
 script = ExtResource("1_2chsl")
 speed = 200.0
 angle_deg = 30.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("CircleShape2D_4ks44")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
-position = Vector2(50, 50)
-scale = Vector2(3, 3)
 texture = ExtResource("2_w3uaj")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(700, 300)
+scale = Vector2(2.5, 2.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CircleShape2D_k618c")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(774, 305)
-scale = Vector2(2.65152, 2.65152)
 texture = ExtResource("3_m4vn1")
