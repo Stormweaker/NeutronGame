@@ -1,4 +1,5 @@
 extends CharacterBody2D
+signal hit
 
 @export var speed:float = 100.0
 @export var angle_deg:float = 45.0
@@ -14,15 +15,9 @@ func _input(event: InputEvent) -> void:
 func _physics_process(delta: float) -> void:
 	var go_down_int:int = int(go_down) * 2 - 1
 	var direction:Vector2 = Vector2(cos(angle),go_down_int * sin(angle)).normalized()
-	print(direction)
 	velocity = speed * direction
 	move_and_slide()
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func _on_ennemy_body_entered(body):
+	print("hit")
+	hide() # Replace with function body.
