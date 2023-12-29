@@ -18,6 +18,7 @@ motion_mode = 1
 script = ExtResource("1_2chsl")
 speed = 200.0
 angle_deg = 30.0
+metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 shape = SubResource("CircleShape2D_4ks44")
@@ -28,6 +29,7 @@ texture = ExtResource("2_w3uaj")
 
 [node name="Ennemy" type="Area2D" parent="."]
 position = Vector2(700, 300)
+metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ennemy"]
 shape = SubResource("CircleShape2D_k618c")
